@@ -1,7 +1,7 @@
 FROM 345280441424.dkr.ecr.ap-south-1.amazonaws.com/ark_base:latest
 
 LABEL ORG="Armedia LLC" \
-      APP="Alfresco" \
+      APP="Mongodb" \
       VERSION="1.0" \
       IMAGE_SOURCE=https://github.com/ArkCase/ark_mongodb \
       MAINTAINER="Armedia LLC"
@@ -34,4 +34,5 @@ RUN set -ex;\
 EXPOSE 27017
 USER ${MONGO_USER}
 
-CMD [ "mongod","--dbpath","/var/lib/mongo","--logpath","/var/log/mongodb/mongod.log"]
+CMD [ "mongod","--dbpath","/var/lib/mongo"]
+#,"--logpath","/var/log/mongodb/mongod.log"]
