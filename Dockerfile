@@ -35,4 +35,3 @@ EXPOSE 27017
 USER ${MONGO_USER}
 
 CMD [ "mongod","--dbpath","/var/lib/mongo"]
-#,"--logpath","/var/log/mongodb/mongod.log"]
